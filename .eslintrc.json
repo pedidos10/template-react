@@ -1,0 +1,78 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:import/typescript",
+        "plugin:react/recommended",
+        "prettier/react",
+        "plugin:react-hooks/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "prettier", "react-hooks"],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "class-methods-use-this": "off",
+        "camelcase": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "_"
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+        "no-useless-constructor": "off",
+        "indent": "off",
+        "no-param-reassign": "off",
+        "import/prefer-default-export": "off",
+        "no-restricted-syntax": "off",
+        "no-await-in-loop": "off",
+        "import/no-unresolved": "off",
+        "import/no-cycle": "off",
+        "no-underscore-dangle": "off",
+        "react/prop-types": "off",
+        "react/display-name": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "no-nested-ternary": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-restricted-imports": [
+            "error"
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        },
+        "react": {
+            "version": "detect"
+        }
+    }
+}
